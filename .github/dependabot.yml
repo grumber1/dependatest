@@ -5,24 +5,9 @@
 
 version: 2
 updates:
-  - package-ecosystem: "npm"
-    directory: "/"
+  - package-ecosystem: "npm" # Specify your package manager (e.g., npm, pip, maven, gradle, etc.)
+    directory: "/"           # Location of the dependency files (e.g., package.json)
     schedule:
-      interval: "daily"
-      time: "14:10"
+      interval: "daily"     # How often to check (daily, weekly, or monthly)
     commit-message:
-      prefix: "chore"
-      include: "scope"
-    labels:
-      - "dependencies"
-      - "automated"
-    reviewers:
-      - "team-name"
-    assignees:
-      - "username"
-    ignore:
-      - dependency-name: "lodash"
-        versions: ["4.17.21"]
-    open-pull-requests-limit: 10
-    rebase-strategy: "lazy"
-    target-branch: "development"
+      prefix: "deps"         # Optional: Customize the commit message prefix
