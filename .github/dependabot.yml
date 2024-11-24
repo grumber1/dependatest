@@ -5,18 +5,6 @@
 
 version: 2
 updates:
-  - package-ecosystem: "npm" # Specify your package manager (e.g., npm, pip, maven, gradle, etc.)
-    directory: "/"           # Location of the dependency files (e.g., package.json)
-    schedule:
-      interval: "daily"     # How often to check (daily, weekly, or monthly)
-    ignore:
-      - dependency-name: "lodash"  # Optional: Exclude specific dependencies
-        versions: ["4.17.21"]      # Optional: Ignore specific versions
-    commit-message:
-      prefix: "deps"   
-
-version: 2
-updates:
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
