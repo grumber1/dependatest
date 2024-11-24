@@ -14,3 +14,27 @@ updates:
         versions: ["4.17.21"]      # Optional: Ignore specific versions
     commit-message:
       prefix: "deps"   
+
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+      time: "14:10"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+    labels:
+      - "dependencies"
+      - "automated"
+    reviewers:
+      - "team-name"
+    assignees:
+      - "username"
+    ignore:
+      - dependency-name: "lodash"
+        versions: ["4.17.21"]
+    open-pull-requests-limit: 10
+    rebase-strategy: "lazy"
+    target-branch: "development"
